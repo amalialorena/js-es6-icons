@@ -127,8 +127,6 @@ container.className = 'container';
 let body = document.querySelector('body');
 body.append(container);
 
-
-
 const icons = [];
 
 iconsArr.forEach((icon) => {
@@ -138,11 +136,17 @@ iconsArr.forEach((icon) => {
 console.log(icons);
 
 for(let i = 0; i < icons.length; i++) {
+	//container icone
 	let iconContainer = document.createElement('div');
-	container.append(iconContainer)
+	iconContainer.className = "icon-container"
+	container.append(iconContainer);
+	//icone
 	let icon = document.createElement('i');
 	iconContainer.append(icon);
 	icon.className = `${icons[i]}`;
-	icon.innerHTML += `${iconsArr[i].name}`;
+	//nome icone
+	let iconName = document.createElement('p');
+	iconContainer.append(iconName);
+	iconName.innerHTML += `${iconsArr[i].name}`;
 	console.log(icons[i]);
 }
