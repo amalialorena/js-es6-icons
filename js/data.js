@@ -126,21 +126,23 @@ let container = document.createElement('div');
 container.className = 'container';
 let body = document.querySelector('body');
 body.append(container);
-let iconContainer = document.createElement('div');
-container.append(iconContainer)
+
 
 
 const icons = [];
 
 iconsArr.forEach((icon) => {
-	let generateIcon = `${icon.family} ${icon.prefix}${icon.name}`;
+	let generateIcon = `${icon.family} ${icon.prefix}${icon.name} ${icon.color}`;
 	icons.push(generateIcon);
 });
 console.log(icons);
 
 for(let i = 0; i < icons.length; i++) {
+	let iconContainer = document.createElement('div');
+	container.append(iconContainer)
 	let icon = document.createElement('i');
 	iconContainer.append(icon);
 	icon.className = `${icons[i]}`;
+	icon.innerHTML += `${iconsArr[i].name}`;
 	console.log(icons[i]);
 }

@@ -1,7 +1,15 @@
 i {
     font-size: 50px;
-}
+};
 
-i.blue{
+i.blue {
     color:blue;
+};
+
+i.green {
+    color:green;
+};
+
+i.orange {
+    color:green;
 }
