@@ -121,11 +121,22 @@ const iconsArr =
 // Milestone 2
 // Ciascuna icona ha una proprietà “color”: utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
 	//aggiungere la classe color alla mia icona
-
+//container icone
 let container = document.createElement('div');
 container.className = 'container';
 let body = document.querySelector('body');
 body.append(container);
+//select
+let selectContainer = document.createElement('div');
+selectContainer.innerHTML = ` <select name="category" id="category">
+	<option value="">vegetable</option>
+	<option value="all">All</option>
+	<option value="animal">animal</option>
+	<option value="vegetable">vegetable</option>
+	<option value="user">user</option>
+</select>`;
+
+select
 
 const icons = [];
 

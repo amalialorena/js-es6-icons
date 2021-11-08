@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
@@ -21,20 +21,21 @@ i.green {
 }
 
 i.orange {
-    color:green;
+    color:orange;
 }
 
 .container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 p {
     padding: 5px 0;
 }
+
 .icon-container {
     width: 200px;
-    /* border: 1px solid black; */
     margin: 20px;
     text-align: center;
     padding: 10px 20px;
