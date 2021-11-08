@@ -129,14 +129,17 @@ body.append(container);
 //select
 let selectContainer = document.createElement('div');
 selectContainer.innerHTML = ` <select name="category" id="category">
-	<option value="">vegetable</option>
 	<option value="all">All</option>
 	<option value="animal">animal</option>
 	<option value="vegetable">vegetable</option>
 	<option value="user">user</option>
 </select>`;
-
-select
+body.prepend(selectContainer);
+let all = document.querySelectorAll('[value="all"]');
+console.log(all)
+iconsArr.forEach((element) => {
+	console.log(element.type);
+})
 
 const icons = [];
 
@@ -144,7 +147,6 @@ iconsArr.forEach((icon) => {
 	let generateIcon = `${icon.family} ${icon.prefix}${icon.name} ${icon.color}`;
 	icons.push(generateIcon);
 });
-console.log(icons);
 
 for(let i = 0; i < icons.length; i++) {
 	//container icone
