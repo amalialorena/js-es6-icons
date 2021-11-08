@@ -1,3 +1,4 @@
+const iconsArr = 
 [
 	{
 		name: 'cat',
@@ -121,3 +122,14 @@
 // Ciascuna icona ha una proprietà “color”: utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
 	//aggiungere la classe color alla mia icona
 
+let container = document.createElement('div');
+container.className = 'container';
+let body = document.querySelector('body');
+body.append(container);
+let iconContainer = document.createElement('div');
+container.append(iconContainer)
+let icon = document.createElement('i');
+iconContainer.append(icon)
+let generateIcon = `${iconsArr[0].family} ${iconsArr[0].prefix}${iconsArr[0].name}`;
+console.log(generateIcon);
+icon.className = `${generateIcon}`;
