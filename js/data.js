@@ -128,8 +128,19 @@ let body = document.querySelector('body');
 body.append(container);
 let iconContainer = document.createElement('div');
 container.append(iconContainer)
-let icon = document.createElement('i');
-iconContainer.append(icon)
-let generateIcon = `${iconsArr[0].family} ${iconsArr[0].prefix}${iconsArr[0].name}`;
-console.log(generateIcon);
-icon.className = `${generateIcon}`;
+
+
+const icons = [];
+
+iconsArr.forEach((icon) => {
+	let generateIcon = `${icon.family} ${icon.prefix}${icon.name}`;
+	icons.push(generateIcon);
+});
+console.log(icons);
+
+for(let i = 0; i < icons.length; i++) {
+	let icon = document.createElement('i');
+	iconContainer.append(icon);
+	icon.className = `${icons[i]}`;
+	console.log(icons[i]);
+}
